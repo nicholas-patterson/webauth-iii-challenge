@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../data/db-config");
+const User = require("./auth-helpers");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const secret = require("../config/secrets");

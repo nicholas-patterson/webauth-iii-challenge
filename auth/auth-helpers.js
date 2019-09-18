@@ -19,12 +19,14 @@ function findById(id) {
 
 function register(newUser) {
   return db("users")
-    .insert(newUser)
+    .insert(newUser, "id")
     .then(([id]) => {
       return findById(id);
     });
 }
 
 function login(filter) {
-  return db("users").where(filter);
+  return db("users")
+    .where(filter)
+    .first();
 }
