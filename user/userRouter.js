@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("./user-helpers");
 
-router.get("/", (req, res) => {
+router.get("/", restricted, (req, res) => {
   User.find().then(users => {
     res.status(200).json(users);
   });
