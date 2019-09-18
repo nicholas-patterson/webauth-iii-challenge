@@ -2,9 +2,12 @@
 
 module.exports = {
   development: {
-    client: "sqlite3",
+    client: "pg",
     connection: {
-      filename: "./dev.sqlite3"
+      host: "localhost",
+      database: "webauth-iii",
+      user: "postgres",
+      password: "Password123"
     },
     useNullAsDefault: true,
 
